@@ -8,7 +8,7 @@ from shutil import copyfile
 from matplotlib import pyplot as plt 
 from scipy.optimize import minimize
 
-RISK_FREE_FILE = 'Data/TBillRate/TB3MS.csv'
+RISK_FREE_FILE = '../data/TBillRate/TB3MS.csv'
 
 
 
@@ -61,7 +61,7 @@ class ETFPortfolio(object):
 
         # Begin DF with oldest asset, this way we dont lose older data
         oldest_asset = '600028' # 'ADSK' #'600028' 
-        filepath = 'Data/Stocks/{}.{}.txt'.format(oldest_asset, self.market)
+        filepath = '../data/Stocks/{}.{}.txt'.format(oldest_asset, self.market)
         oldest_data = read_OHLC(filepath)
 
         self.asset_matrix = pd.DataFrame()
@@ -70,7 +70,7 @@ class ETFPortfolio(object):
         # Load each asset file and save to a dataframe
         for asset in self.assets_left.index:
             print(asset)
-            filepath = 'Data/Stocks/{}.{}.txt'.format(asset.lower(), self.market)
+            filepath = '../data/Stocks/{}.{}.txt'.format(asset.lower(), self.market)
             asset_df = read_OHLC(filepath)
             self.asset_matrix[asset] = asset_df['close']
 
@@ -414,8 +414,8 @@ class ETFPortfolio(object):
 
 if __name__ == '__main__':
 
-    portf_path = 'Data/ETF/iSharesExpTechSoftware.csv'
-    portf_OHLC = 'Data/ETF/iSharesExpTechSoftwarePerf.csv'
+    portf_path = '../data/ETF/iSharesExpTechSoftware.csv'
+    portf_OHLC = '../data/ETF/iSharesExpTechSoftwarePerf.csv'
     portf = ETFPortfolio()
 
     experiments=(
