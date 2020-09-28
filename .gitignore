@@ -1,0 +1,7 @@
+Data/*
+Outputs/*
+stock_prices.csv
+Literature
+__pycache__
+test.ipynb
+weights.csv
