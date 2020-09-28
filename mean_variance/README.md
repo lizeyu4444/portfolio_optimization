@@ -2,7 +2,6 @@
 
 Originally forked from [MarkowitzPortfolioOptimization](https://github.com/rshemet/MarkowitzPortfolioOptimization).
 
-This strategy does not include stock selection, which has been done by the ETF manager. Based on the stocks of ETF, we optimize the weights of portfolio to gain smart beta.
 
 ## Improves:
 
